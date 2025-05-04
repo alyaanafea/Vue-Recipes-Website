@@ -13,19 +13,16 @@ export const useMealsStore = defineStore("mealsStore", {
   },
   actions: {
     async searchMeals(name) {
-      const response = await axiosClient.get(`search.php?s=${name}`);
-      this.searchedMeals = response.data.meals;
-      //  console.log(this.searchedMeals);
+      if(!name){this.searchedMeals =[]}
+    else { const response = await axiosClient.get(`search.php?s=${name}`);
+      this.searchedMeals = response.data.meals;}
+
     },
     async searchByLetter(letter) {
+      
       const response = await axiosClient.get(`search.php?f=${letter}`);
       this.mealsByLetter = response.data.meals;
-      //  console.log(this.searchedMeals);
     },
-    // async viewRondomMEals() {
-    //   const response = await axiosClient.get(`random.php`);
-    //   this.rondomMeals = response.data.meals;
-      //  console.log(this.searchedMeals);
-    // },
+   
   },
 });

@@ -1,5 +1,8 @@
 <template>
   <router-view />
+  <div class="font-bold text-emerald-700 text-2xl md:text-4xl pt-8 px-8">
+    Random Meals
+  </div>
   <div
     class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:p-15 p-8 justify-center items-center"
   >
