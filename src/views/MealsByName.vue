@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center items-center pt-5">
+  <div class="flex justify-center items-center pt-20">
     <input
       @input="searchMeals(keyword)"
       v-model="keyword"
@@ -15,7 +15,7 @@
       v-if="!meals.length && !keyword"
       class="text-center col-span-full text-xl text-gray-500"
     >
-      Please search for a recipe to view results
+      search for a recipe to view results
     </div>
     <MealsCard v-for="meal in meals" :key="meal.idMeal" :meal="meal" />
   </div>

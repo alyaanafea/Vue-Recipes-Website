@@ -1,8 +1,8 @@
 <template>
-  <div class="flex flex-wrap justify-center items-center gap-5 pt-5 text-2xl">
+  <div class="flex flex-wrap justify-center items-center gap-5 pt-20 text-2xl">
     <router-link
-      class="transition-transform duration-200 hover:scale-125 hover:font-bold hover:text-green-700"
-      active-class="scale-125 font-bold text-green-700"
+      class="transition-transform duration-200 hover:scale-125 hover:font-bold hover:text-orange-800"
+      active-class="scale-125 font-bold text-orange-800"
       :to="{ name: 'byLetter', params: { letter } }"
       v-for="letter in letters"
       :key="letter"

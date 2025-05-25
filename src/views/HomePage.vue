@@ -1,6 +1,10 @@
 <template>
   <router-view />
-  <div class="font-bold text-emerald-700 text-2xl md:text-4xl pt-8 px-8">
+  <Hero />
+  <div
+    class="font-bold text-orange-700 text-2xl md:text-4xl pt-8 px-8"
+    id="meals"
+  >
     Random Meals
   </div>
   <div
@@ -13,6 +17,7 @@
 import { onMounted, ref } from "vue";
 import MealsCard from "../components/MealsCard.vue";
 import { axiosClient } from "../store/axiosClient";
+import Hero from "../components/Hero.vue";
 
 const meals = ref([]);
 onMounted(async () => {
